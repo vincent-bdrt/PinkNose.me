@@ -19,7 +19,7 @@ $(document).ready(function () {
         var result_Makeup = $('#Result_Makeup').attr('src');
         var result_Eyes = $('#Result_Eyes').attr('src');
         var result_Mouth = $('#Result_Mouth').attr('src');
-        var result_Glasses_back = $('#Result_Glasses_back').attr('src');
+        var result_Glasses_Back = $('#Result_Glasses_Back').attr('src');
         var result_Nose = $('#Result_Nose').attr('src');
         var result_Glasses = $('#Result_Glasses').attr('src');
         var result_Earring = $('#Result_Earring').attr('src');
@@ -32,10 +32,10 @@ $(document).ready(function () {
         var result_Mustache = $('#Result_Mustache').attr('src');
         var result_Hair = $('#Result_Hair').attr('src');
         var result_Eyebrow = $('#Result_Eyebrow').attr('src');
-        var Result_Hair_back = $('#Result_Hair_back').attr('src');
-        var result_Hat_Hair_back = $('#Result_Hat_Hair_back').attr('src');
+        var Result_Hair_Back = $('#Result_Hair_Back').attr('src');
+        var result_Hat_Hair_Back = $('#Result_Hat_Hair_Back').attr('src');
         var result_Hat_Hair = $('#Result_Hat_Hair').attr('src');
-        var result_Hat_back = $('#Result_Hat_back').attr('src');
+        var result_Hat_Back = $('#Result_Hat_Back').attr('src');
         var result_Hat = $('#Result_Hat').attr('src');
         context.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -58,12 +58,12 @@ $(document).ready(function () {
         var img_Mustache = loadImage(result_Mustache, generation_image);
 
         var img_Hair = loadImage(result_Hair, generation_image);
-        var img_Hair_back = loadImage(Result_Hair_back, generation_image);
+        var img_Hair_Back = loadImage(Result_Hair_Back, generation_image);
         var img_Glasses = loadImage(result_Glasses, generation_image);
-        var img_Glasses_back = loadImage(result_Glasses_back, generation_image);
-        var img_Hat_Hair_back = loadImage(result_Hat_Hair_back, generation_image);
+        var img_Glasses_Back = loadImage(result_Glasses_Back, generation_image);
+        var img_Hat_Hair_Back = loadImage(result_Hat_Hair_Back, generation_image);
         var img_Hat_Hair = loadImage(result_Hat_Hair, generation_image);
-        var img_Hat_back = loadImage(result_Hat_back, generation_image);
+        var img_Hat_Back = loadImage(result_Hat_Back, generation_image);
         var img_Hat = loadImage(result_Hat, generation_image);
 
         function generation_image() {
@@ -71,9 +71,9 @@ $(document).ready(function () {
             // composite now
             context.drawImage(img_BG, 0, 0);
             context.drawImage(img_BG_motif, 0, 0);
-            context.drawImage(img_Hat_back, 0, 0);
-            context.drawImage(img_Hair_back, 0, 0);
-            context.drawImage(img_Hat_Hair_back, 0, 0);
+            context.drawImage(img_Hat_Back, 0, 0);
+            context.drawImage(img_Hair_Back, 0, 0);
+            context.drawImage(img_Hat_Hair_Back, 0, 0);
             context.drawImage(img_Skin, 0, 0);
             context.drawImage(img_Spot, 0, 0);
             context.drawImage(img_Marquillage, 0, 0);
@@ -87,7 +87,7 @@ $(document).ready(function () {
             context.drawImage(img_Mouth, 0, 0);
             context.drawImage(img_Eyebrow, 0, 0);
             context.drawImage(img_Mustache, 0, 0);
-            context.drawImage(img_Glasses_back, 0, 0);
+            context.drawImage(img_Glasses_Back, 0, 0);
             context.drawImage(img_Nose, 0, 0);
             context.drawImage(img_Glasses, 0, 0);
             context.drawImage(img_Earring, 0, 0);
