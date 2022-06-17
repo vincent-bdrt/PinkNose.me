@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+$color-jaune : #F3C65D;
+$color-verte : #2fda8a;
+$color-blue:#39b3d7;
+$color-rouge:#E9585B;
+$color-violet:#6223b6;
+$color-black : #212529;
+$color-darkgrey:#44464a;
+$color-grey: #707070;
+$color-lightgrey:#f7f9fa;
+
+$color-particle: #fff;
+$spacing: 2560px;
+$time-1: 60s;
+$time-2: 120s;
+$time-3: 180s;
+$time-4: 600s;
+
+/* Pauls awesome mixin */
+@function particles($max) {
+    $val: 0px 0px $color-particle;
+
+    @for $i from 1 through $max {
+        $val: #{$val},
+        random($spacing)+px random($spacing)+px $color-particle;
+    }
+
+    @return $val;
+}
+
+@mixin particles($max) {
+    box-shadow: particles($max);
+}
+

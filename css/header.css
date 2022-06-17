@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+/* Pauls awesome mixin */
+.navbar {
+  padding: 15px 10px;
+  background: #fff;
+  border: none;
+  border-radius: 0;
+  margin-bottom: 40px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-btn {
+  box-shadow: none !important;
+  outline: none !important;
+  border: none;
+}
+
+.btn-primary.focus, .btn-primary:focus {
+  box-shadow: none !important;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+#sidebar {
+  z-index: 10000;
+}
+
+#sidebar .custom-menu {
+  display: inline-block;
+  position: absolute;
+  top: 20px;
+  right: 0;
+  margin-right: -50px;
+  transition: all ease-in-out 0.5s;
+}
+
+#sidebar .custom-menu .btn {
+  width: 40px;
+  height: 40px;
+}
+
+#sidebar .custom-menu .btn.btn-primary {
+  background: #212529;
+  border-color: #212529;
+}
+
+#sidebar .custom-menu .btn.btn-primary:hover, #sidebar .custom-menu .btn.btn-primary:focus {
+  background: #F3C65D !important;
+  border-color: #F3C65D !important;
+}
+
+a[data-toggle="collapse"] {
+  position: relative;
+}
+
+.dropdown-toggle::after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+#content {
+  width: 100%;
+  padding: 0;
+  min-height: 100vh;
+  transition: all 0.3s;
+}

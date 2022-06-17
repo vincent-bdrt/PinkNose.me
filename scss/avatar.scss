@@ -1,0 +1,1096 @@
+@import 'variables.scss';
+
+/*---JEU AVATAR--*/
+
+.bg-dark {
+	background-color: $color-black !important;
+}
+
+h2 {
+	color: white;
+	text-decoration: underline;
+	text-align: center;
+}
+
+.version {
+	position: absolute;
+	bottom: 0;
+	right: 20px;
+	font-size: 12px;
+	text-decoration: underline;
+}
+
+.author {
+	position: absolute;
+	bottom: 0;
+	left: 20px;
+	font-size: 12px;
+	text-decoration: underline;
+
+	a {
+		color: $color-black;
+		opacity: 0.5;
+	}
+}
+
+#sidebar {
+	position: absolute;
+	left: 15px;
+	top: 50%;
+	transform: translateY(-50%);
+	display: flex;
+	flex-direction: column;
+	z-index: 100;
+
+	.btn.option {
+		margin-bottom: 15px;
+		display: flex;
+		background: $color-black;
+		border: none;
+		cursor: pointer;
+		width: 40px;
+		height: 40px;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+
+		img {
+			width: 30px;
+			height: 30px;
+		}
+
+		&:hover {
+
+			span {
+				transform: scale(1);
+				opacity: 1;
+			}
+		}
+
+		span {
+			position: absolute;
+			background-color: $color-darkgrey;
+			white-space: nowrap;
+			padding: .5rem 1rem;
+			border-radius: 6px;
+			left: calc(100% + 1.5rem);
+			transform-origin: center left;
+			transform: scale(0);
+			opacity: 0;
+			transition: .15s ease;
+			top: 0;
+
+			&:before {
+				content: "";
+				display: block;
+				width: 12px;
+				height: 12px;
+				position: absolute;
+				background-color: $color-darkgrey;
+				left: -5px;
+				top: 50%;
+				transform: translatey(-50%) rotate(45deg);
+				border-radius: 3px;
+			}
+		}
+
+	}
+
+	#Random {
+		&:hover {
+			background-color: $color-jaune;
+		}
+	}
+
+	#Telecharger {
+		&:hover {
+			background-color: $color-blue;
+		}
+
+		&.btn-success {
+			background-color: $color-verte;
+		}
+	}
+
+	#Reinitialiser,
+	#Utip {
+		&:hover {
+			background-color: $color-rouge;
+		}
+	}
+
+	#Morphologie-btn {
+		&:hover {
+			background-color: $color-violet;
+		}
+	}
+
+
+}
+
+.menu-plus {
+	display: flex;
+	position: absolute;
+	flex-direction: column;
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0 10px 20px rgba(64, 64, 64, 0.15);
+	top: 10;
+	left: 10;
+	width: 208px;
+	z-index: -1000;
+	display: none;
+
+	.menu-list {
+		margin: 0;
+		display: block;
+		width: 100%;
+		padding: 8px;
+	}
+
+	ul {
+		list-style-type: none;
+	}
+
+	.menu-item {
+		position: relative;
+	}
+
+	.btn-danger {
+		background-color: $color-rouge !important;
+		border-color: $color-rouge !important;
+	}
+
+	.menu-button {
+		font: inherit;
+		color: inherit;
+		outline: none;
+		border: 0;
+		padding: 8px 8px;
+		width: 100%;
+		border-radius: 8px;
+		display: flex;
+		align-items: center;
+		position: relative;
+		background-color: #fff;
+
+
+	}
+}
+
+body.game-started {
+	.menu-plus {
+		z-index: 1000;
+	}
+}
+
+#Zone-Gauche {
+	background-color: $color-lightgrey;
+}
+
+#Zone-Droite {
+	background-color: $color-black;
+}
+
+#Zone-Droite section {
+	display: none;
+	min-height: calc(100vh - 105px);
+}
+
+#Zone-Droite section,
+#Zone-Droite .tab-pane {
+	&.disable {
+		position: relative;
+
+		.disable-message {
+			display: block;
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 200;
+
+			p {
+				border-radius: 16px;
+				color: white;
+				background-color: $color-rouge;
+				color: white !important;
+				font-weight: bold;
+				padding: 15px;
+				box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+				text-transform: uppercase;
+				width: max-content;
+				margin: 0 auto;
+				margin-top: 100px;
+			}
+
+			div {
+				background-color: $color-jaune;
+				color: white !important;
+				box-shadow: none !important;
+				width: max-content;
+				padding: 15px;
+				border-radius: 15px;
+				margin: 15px auto;
+				color: white !important;
+				font-weight: bold;
+				padding: 15px;
+				box-shadow: none !important;
+				text-transform: uppercase;
+				box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+				cursor: pointer;
+				display: flex;
+				align-items: center;
+
+				&:hover {
+					i {
+						background-color: white;
+						color: $color-rouge;
+					}
+
+					background-color: $color-rouge;
+				}
+			}
+		}
+
+		.nav-pills,
+		.section-vignettes,
+		.vignettes-color {
+			filter: grayscale(1) blur(10px);
+		}
+	}
+}
+
+#Section-Skin {
+	display: block;
+}
+
+/*--------------------------------------------*/
+/*Global*/
+/*--------------------------------------------*/
+#content .game,
+.btn.btn-primary.option:not(#sidebarCollapse) {
+	display: none;
+}
+
+section.accueil {
+	background-color: $color-black;
+	margin: 0;
+	padding: 0;
+	min-height: 100vh;
+	width: 100vw;
+	font-family: 'Poppins';
+	position: absolute;
+	top: 0%;
+	overflow: hidden;
+
+	.gtranlate-section {
+		display: flex;
+		flex-direction: column;
+		background: white;
+		padding: 15px;
+		border-radius: 5px;
+		width: max-content;
+		position: absolute;
+		top: 50%;
+		left: 15px;
+		transform: translateY(-50%);
+	}
+
+	.background-home {
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		max-width: 80vw;
+	}
+}
+
+
+
+/*--------------------------------------------*/
+/*Title*/
+/*--------------------------------------------*/
+h1 {
+	color: white;
+	text-align: center;
+	font-weight: 800;
+	font-size: 70px;
+	line-height: 1;
+	margin-top: 10vh;
+
+	span {
+		color: $color-jaune
+	}
+}
+
+/*--------------------------------------------*/
+/*Button*/
+/*--------------------------------------------*/
+a.start {
+	color: $color-black !important;
+	background-color: $color-jaune;
+	padding: 30px 45px;
+	font-size: 20px;
+	border-radius: 30px;
+	border: solid 2px $color-jaune;
+	cursor: pointer;
+	text-align: center;
+	z-index: 10;
+	transition: all ease-in-out 0.5s;
+
+	&:hover {
+		text-decoration: none;
+		background: transparent;
+		color: white !important;
+
+	}
+
+}
+
+
+/*--------------------------------------------*/
+/*Particules*/
+/*--------------------------------------------*/
+.particle,
+.particle:after {
+	background: transparent;
+}
+
+.particle:after {
+	position: absolute;
+	content: "";
+	top: $spacing;
+}
+
+.particle-1 {
+	animation: animParticle $time-1 linear infinite;
+	@include particles(600);
+	height: 1px;
+	width: 1px;
+}
+
+.particle-1:after {
+	@include particles(600);
+	height: 1px;
+	width: 1px;
+}
+
+.particle-2 {
+	animation: animParticle $time-2 linear infinite;
+	@include particles(200);
+	height: 2px;
+	width: 2px;
+}
+
+.particle-2:after {
+	@include particles(200);
+	height: 2px;
+	width: 2px;
+}
+
+.particle-3 {
+	animation: animParticle $time-3 linear infinite;
+	@include particles(100);
+	height: 3px;
+	width: 3px;
+}
+
+.particle-3:after {
+	@include particles(100);
+	height: 3px;
+	width: 3px;
+}
+
+.particle-4 {
+	animation: animParticle $time-4 linear infinite;
+	@include particles(400);
+	height: 1px;
+	width: 1px;
+}
+
+.particle-4:after {
+	@include particles(400);
+	height: 1px;
+	width: 1px;
+}
+
+@keyframes animParticle {
+	from {
+		transform: translateY(0px);
+	}
+
+	to {
+		transform: translateY($spacing * -1);
+	}
+}
+
+.btn.focus,
+.btn:focus {
+	outline: 0;
+	box-shadow: none !important;
+}
+
+
+/*--------------------------------------------*/
+/*Navigation*/
+/*--------------------------------------------*/
+#Categories {
+	margin: 15px 0px;
+	padding: 0 15px;
+	position: relative;
+	height: 75px;
+
+	.btn {
+		background-color: transparent;
+		transition: all ease-in-out 0.5s;
+		position: relative;
+
+		&:before {
+			content: "";
+			width: 20px;
+			height: 20px;
+			display: block;
+			background-color: transparent;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translateY(-50%) translateX(-50%);
+			transition: all ease-in-out 0.4s;
+			border-radius: 10rem;
+
+
+		}
+
+		&.new {
+			&:after {
+				content: "";
+				width: 15px;
+				height: 15px;
+				border-radius: 10rem;
+				display: block;
+				background-color: $color-rouge;
+				position: absolute;
+				top: 0px;
+				right: 5px;
+				border: solid 2px $color-black;
+				z-index: 200;
+			}
+		}
+
+		&:hover {
+			&:before {
+				width: 60px;
+				height: 60px;
+				background-color: $color-darkgrey;
+
+			}
+		}
+
+		&.active {
+			&:before {
+				width: 60px;
+				height: 60px;
+				background-color: $color-jaune;
+			}
+		}
+
+		img {
+			height: 40px;
+			z-index: 100;
+			position: relative;
+		}
+	}
+
+	#outer {
+		width: 100%;
+		overflow: hidden;
+		white-space: nowrap;
+		display: inline-block;
+	}
+
+	#left-button,
+	#right-button {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+
+		a {
+			color: $color-jaune;
+			font-size: 30px;
+			transition: all ease-in-out 0.4s;
+
+			&:hover {
+				opacity: 0.5;
+			}
+		}
+	}
+
+	#right-button {
+		right: -15px;
+	}
+
+	#left-button {
+		left: -15px;
+	}
+
+	#inner:first-child {
+		margin-left: 0;
+	}
+
+}
+
+/*--------------------------------------------*/
+/*Resultat*/
+/*--------------------------------------------*/
+.image-resultat {
+
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	div {
+		overflow: hidden;
+		width: 75%;
+		position: relative;
+		background-color: white;
+		border-radius: 16px;
+		box-shadow:
+			0 2.8px 2.2px rgba(0, 0, 0, 0.02),
+			0 6.7px 5.3px rgba(0, 0, 0, 0.028),
+			0 12.5px 10px rgba(0, 0, 0, 0.035),
+			0 22.3px 17.9px rgba(0, 0, 0, 0.042),
+			0 41.8px 33.4px rgba(0, 0, 0, 0.05),
+			0 100px 80px rgba(0, 0, 0, 0.07);
+	}
+
+	img {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		display: block;
+		width: auto;
+	}
+
+	#Result_Background {
+		z-index: 0;
+		position: relative;
+	}
+
+	#Result_Background_motif {
+		z-index: 1;
+	}
+
+	#Result_Hat_Back {
+		z-index: 2;
+	}
+
+	#Result_Hair_Back,
+	#Result_Hat_Hair_Back {
+		z-index: 3;
+	}
+
+	#Result_Skin {
+		z-index: 4;
+	}
+
+	#Result_Top,
+	#Result_Spot {
+		z-index: 5;
+	}
+
+	#Result_Motif_Top {
+		z-index: 6;
+	}
+
+	#Result_Necklace {
+		z-index: 7;
+	}
+
+	#Result_Jacket,
+	#Result_Costums {
+		z-index: 8;
+	}
+
+	#Result_Beard,
+	#Result_Makeup {
+		z-index: 9;
+	}
+
+	#Result_Mouth,
+	#Result_Eyebrow,
+	#Result_Eyes {
+		z-index: 10;
+	}
+
+	#Result_Mustache,
+	#Result_Glasses_Back {
+		z-index: 11;
+	}
+
+	#Result_Nose {
+		z-index: 12;
+	}
+
+	#Result_Glasses {
+		z-index: 13;
+	}
+
+	#Result_Earring {
+		z-index: 14;
+	}
+
+	#Result_Hair,
+	#Result_Hat_Hair {
+		z-index: 15;
+	}
+
+	#Result_Hat {
+		z-index: 16;
+	}
+}
+
+.disable-message {
+	display: none;
+}
+
+/*--------------------------------------------*/
+/*Vignettes*/
+/*--------------------------------------------*/
+.section-vignettes {
+	max-height: calc(100vh - 105px);
+	height: 100%;
+	overflow-y: auto;
+	display: flex;
+	justify-content: flex-start;
+	align-content: flex-start;
+	padding: 15px;
+
+	&.zoom-face .vignette img {
+		transform: scale(1.5) translate(15px, 15px)
+	}
+
+	&.withcolor {
+		max-height: calc(100vh - 105px - 200px);
+	}
+
+	&.withsubpart {
+		max-height: 420px;
+	}
+}
+
+.vignette {
+	transition: all ease-in-out 0.5s;
+	cursor: pointer;
+	transition-duration: 300ms;
+	box-shadow:
+		0 2.8px 2.2px rgba(0, 0, 0, 0.02),
+		0 6.7px 5.3px rgba(0, 0, 0, 0.028),
+		0 12.5px 10px rgba(0, 0, 0, 0.035),
+		0 22.3px 17.9px rgba(0, 0, 0, 0.042),
+		0 41.8px 33.4px rgba(0, 0, 0, 0.05),
+		0 100px 80px rgba(0, 0, 0, 0.07);
+	border-radius: 16px;
+	overflow: hidden;
+	position: relative;
+	background-size: 100%;
+	background-color: white;
+
+	&:hover {
+		transition-duration: 150ms;
+		box-shadow:
+			0 2.8px 2.2px rgba(0, 0, 0, 0.22),
+			0 6.7px 5.3px rgba(0, 0, 0, 0.228),
+			0 12.5px 10px rgba(0, 0, 0, 0.235),
+			0 22.3px 17.9px rgba(0, 0, 0, 0.242),
+			0 41.8px 33.4px rgba(0, 0, 0, 0.25),
+			0 100px 80px rgba(0, 0, 0, 0.27);
+		transform: translateY(-5px);
+	}
+		&:after {
+			content: "";
+			display: block;
+			padding-bottom: 100%;
+		}
+	img {
+		position: absolute;
+		top:0;
+		left: 0;
+		display: block;
+		width: 100%;
+		max-width: 100%;
+		height: auto;
+		&.zindex-1{z-index:0}
+		&.zindex-1{z-index:1}
+		&.zindex-2{z-index:2}
+		&.zindex-3{z-index:3}
+		&.zindex-4{z-index:4}
+	}
+}
+.vignette-default .vignette img{
+	background-image: url('../avatar-creator/UI/Base.png');
+	background-size: cover;
+	background-color: white;
+}
+
+#Vignettes-Skin .vignette img,
+#Vignettes-Background .vignette img {
+	background-image: none;
+}
+
+div#Vignettes-Background div.vignette img {
+	background-color: #DA6A6A;
+}
+
+/*
+#Vignettes-Earring .vignette{
+	background-size: 500px, 500px;
+	background-position: 300px -150px, 300px -150px;
+}
+
+#Vignettes-Necklace .vignette{
+	background-size: 600px, 350px;
+	background-position: 600px -140px, 600px -140px;
+}
+*/
+/*--------------------------------------------*/
+/*Reset*/
+/*--------------------------------------------*/
+
+.reset.color-item {
+	background-color: $color-rouge;
+	font-weight: bold;
+	text-transform: uppercase;
+	cursor: pointer;
+	width: 40px;
+	min-width: 40px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+
+	&:hover,
+	&:focus {
+		transform: none !important;
+		background-color: #bb4447;
+	}
+
+	&.active {
+		transform: none !important;
+	}
+
+	&.active:hover {
+		transform: none !important;
+	}
+}
+
+/*--------------------------------------------*/
+/*Couleurs*/
+/*--------------------------------------------*/
+
+.vignettes-color {
+	background-color: white;
+	border-radius: 15px;
+	padding: 20px;
+	box-shadow:
+		0 2.8px 2.2px rgba(0, 0, 0, 0.02),
+		0 6.7px 5.3px rgba(0, 0, 0, 0.028),
+		0 12.5px 10px rgba(0, 0, 0, 0.035),
+		0 22.3px 17.9px rgba(0, 0, 0, 0.042),
+		0 41.8px 33.4px rgba(0, 0, 0, 0.05),
+		0 100px 80px rgba(0, 0, 0, 0.07);
+	position: relative;
+	margin: 50px 30px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+	span {
+		position: absolute;
+		top: -34px;
+		background-color: $color-jaune;
+		font-weight: bold;
+		text-transform: uppercase;
+		left: 30px;
+		padding: 5px 20px;
+		border-top-left-radius: 15px;
+		border-top-right-radius: 15px;
+		cursor: default;
+	}
+}
+
+.color-item {
+	width: 40px;
+	height: 40px;
+	transition: all ease 0.5s;
+	cursor: pointer;
+	border-radius: 100rem;
+	border: dashed 0px transparent;
+
+	&:not(.reset):hover,
+	&:not(.reset).active {
+		position: relative;
+		transform: scale(1.2);
+
+		&:before {
+			content: "";
+			display: block;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			border: solid 2px white;
+			border-radius: 3rem;
+		}
+	}
+
+}
+
+.vignette-size-hat {
+	justify-content: space-around;
+
+	button {
+		background: white;
+		border: none;
+		border-radius: 15px;
+		padding: 5px 10px;
+		color: $color-black;
+		text-transform: uppercase;
+		transition: all ease-in-out 0.5s;
+		box-shadow:
+			0 2.8px 2.2px rgba(0, 0, 0, 0.02),
+			0 6.7px 5.3px rgba(0, 0, 0, 0.028),
+			0 12.5px 10px rgba(0, 0, 0, 0.035),
+			0 22.3px 17.9px rgba(0, 0, 0, 0.042),
+			0 41.8px 33.4px rgba(0, 0, 0, 0.05),
+			0 100px 80px rgba(0, 0, 0, 0.07);
+
+		&.active,
+		&:hover {
+			background-color: $color-jaune;
+			border-color: white;
+		}
+	}
+}
+
+/*--------------------------------------------*/
+/*Genre*/
+/*--------------------------------------------*/
+
+.button.genre {
+	width: 300px;
+	height: 300px;
+	border-radius: 0;
+	border: none;
+	background-color: white;
+	background-image: url(../avatar-creator/UI/Base.png);
+	background-size: cover;
+	transition: all ease-in-out 0.5s;
+	cursor: pointer;
+	box-shadow:
+		0 2.8px 2.2px rgba(0, 0, 0, 0.02),
+		0 6.7px 5.3px rgba(0, 0, 0, 0.028),
+		0 12.5px 10px rgba(0, 0, 0, 0.035),
+		0 22.3px 17.9px rgba(0, 0, 0, 0.042),
+		0 41.8px 33.4px rgba(0, 0, 0, 0.05),
+		0 100px 80px rgba(0, 0, 0, 0.07);
+	border-radius: 10px;
+
+	&:hover {
+		transition-duration: 150ms;
+		box-shadow:
+			0 2.8px 2.2px rgba(0, 0, 0, 0.22),
+			0 6.7px 5.3px rgba(0, 0, 0, 0.228),
+			0 12.5px 10px rgba(0, 0, 0, 0.235),
+			0 22.3px 17.9px rgba(0, 0, 0, 0.242),
+			0 41.8px 33.4px rgba(0, 0, 0, 0.25),
+			0 100px 80px rgba(0, 0, 0, 0.27);
+		transform: translateY(-5px);
+	}
+
+	&.Women {
+		background-image: url(../avatar-creator/UI/Base__Femme.png);
+	}
+}
+
+.modal-morpho {
+	display: none;
+	position: fixed;
+	z-index: 1000;
+	padding-top: 100px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: #000;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content-morpho {
+	transition: all ease-in-out 0.5s;
+	margin: auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%;
+	position: relative;
+	padding-bottom: 60px;
+	border-radius: 16px;
+	box-shadow:
+		0 2.8px 2.2px rgba(0, 0, 0, 0.02);
+	background: rgba(255, 255, 255, 0.25);
+	box-shadow: 0 8px 32px 0 rgba(82, 82, 82, 0.37);
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
+	border-radius: 10px;
+	border: 1px solid rgba(255, 255, 255, 0.18);
+
+	h2 {
+		color: white;
+		text-align: center;
+	}
+
+	p {
+		font-size: 20px;
+		text-align: center;
+	}
+}
+
+.close-morpho {
+	color: #aaaaaa;
+	font-weight: bold;
+	font-size: 60px;
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	line-height: 40px;
+
+	&:hover {
+		color: #000;
+		text-decoration: none;
+		cursor: pointer;
+	}
+
+	&:focus {
+		color: #000;
+		text-decoration: none;
+		cursor: pointer;
+	}
+}
+
+/*--------------------------------------------*/
+/*Tableau*/
+/*--------------------------------------------*/
+
+
+.avatar-download-btn {
+	display: flex;
+	padding: 15px;
+	background-color: white;
+	border-radius: 16px;
+	transition: ease-in-out 0.5s all;
+	cursor: pointer;
+	align-items: center;
+	margin: 5px 0px;
+	box-shadow:
+		0 2.8px 2.2px rgba(0, 0, 0, 0.02),
+		0 6.7px 5.3px rgba(0, 0, 0, 0.028),
+		0 12.5px 10px rgba(0, 0, 0, 0.035),
+		0 22.3px 17.9px rgba(0, 0, 0, 0.042),
+		0 41.8px 33.4px rgba(0, 0, 0, 0.05),
+		0 100px 80px rgba(0, 0, 0, 0.07);
+
+	img {
+		width: 32px;
+		height: 32px;
+		margin-right: 15px;
+	}
+
+	p {
+		color: $color-black;
+		text-transform: uppercase;
+		margin-bottom: 0;
+		font-weight: 600;
+
+
+	}
+
+	&:hover {
+		background-color: $color-jaune;
+		color: white !important;
+
+		a {
+			color: white !important;
+		}
+	}
+}
+
+.nav-pills {
+	padding: 15px 32px;
+	justify-content: space-around;
+
+	li {
+		display: flex;
+		background: transparent;
+		border: $color-grey dashed 2px;
+		border-radius: 16px;
+		margin: 5px;
+		box-shadow: -1px 2px 10px 3px rgba(0, 0, 0, .3) inset;
+
+		img {
+			width: 40px;
+			height: 40px;
+			opacity: 0.5;
+		}
+
+		a {
+			font-weight: bold;
+			text-transform: uppercase;
+			display: flex;
+			align-items: center;
+			color: $color-grey;
+			padding: 15px;
+
+			&:hover {
+				text-decoration: none;
+			}
+
+			.reset {
+				display: none !important;
+			}
+		}
+
+		&:hover {
+			border: dashed $color-jaune 2px;
+
+			a {
+				color: $color-jaune;
+			}
+			img{
+				opacity: 1;
+			}
+		}
+
+		&.active {
+			border: solid $color-jaune 2px;
+			background-color: $color-jaune;
+			color: white !important;
+			box-shadow: none !important;
+
+			a {
+				color: white !important;
+			}
+
+			.reset {
+
+				display: flex !important;
+			}
+			img{
+				opacity: 1;
+			}
+		}
+	}
+}

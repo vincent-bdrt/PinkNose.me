@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+/* Pauls awesome mixin */
+@media screen and (max-width: 992px) {
+  h1 {
+    font-size: 45px;
+  }
+  .section-vignettes {
+    max-height: 160px !important;
+    overflow-x: auto !important;
+    flex-direction: column !important;
+  }
+  .section-vignettes .col-sm-6 {
+    width: 120px !important;
+    margin-right: 20px !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body:not(.game-started) #sidebar {
+    visibility: hidden;
+    display: none;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity ease-in-out 0.5s;
+  }
+  .game {
+    min-height: 800px;
+  }
+  div.min-vh-100 {
+    min-height: 50% !important;
+  }
+  #Zone-Gauche {
+    height: auto;
+    min-height: 100% !important;
+    overflow: hidden !important;
+  }
+  .image-resultat {
+    padding: 70px;
+    height: auto !important;
+  }
+  #sidebar {
+    top: 30px;
+    flex-direction: row;
+    width: 100%;
+    z-index: 1000;
+    justify-content: space-evenly;
+    left: 0px;
+    display: flex;
+    visibility: visible;
+    opacity: 1;
+  }
+  #sidebar .btn.option {
+    margin-bottom: 0;
+  }
+  #sidebar .btn.option span {
+    display: none !important;
+  }
+  .version,
+  .author {
+    margin-bottom: 5px;
+  }
+  .vignettes-color {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, 40px) !important;
+    gap: 5px !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .modal-morpho {
+    padding-top: 50px;
+  }
+  .modal-morpho .d-flex {
+    flex-direction: column;
+  }
+  .modal-morpho .button.genre {
+    aspect-ratio: 1/1;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    margin-bottom: 25px;
+  }
+}
