@@ -57,7 +57,7 @@
                     $C_Necklace = count($F_Necklace);
                     for ($i = 1; $i <= $C_Necklace; $i++) {
                         echo '<div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-xs-6 p-0 vignette_col"><div class="m-2 vignette" data-element="'.$i.'">';
-                        echo '<img data-vignette-item="Necklace" src="avatar-creator/images/Necklace/'.$i.'/1.png"> ';
+                        echo '<img data-vignette-item="Necklace"  alt="Avatar Vignette Necklace"  src="avatar-creator/images/Necklace/'.$i.'/1.png"> ';
                         echo '</div></div>';
                     }
                 ?>
@@ -82,7 +82,7 @@
            $C_Earring = count($F_Earring);
            for ($i = 1; $i <= $C_Earring; $i++) {
             echo '<div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-xs-6 p-0 vignette_col"><div class="m-2 vignette" data-element="'.$i.'">';
-            echo '<img data-vignette-item="Earring" src="avatar-creator/images/Earring/'.$i.'/1.png"> ';
+            echo '<img data-vignette-item="Earring" alt="Avatar Vignette Earring"  src="avatar-creator/images/Earring/'.$i.'/1.png"> ';
             echo '</div></div>';
        }
    ?>
