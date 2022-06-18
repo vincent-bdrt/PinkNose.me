@@ -30,7 +30,7 @@
                     $C_Christmas = count($F_Christmas);
                     for ($i = 1; $i <= $C_Christmas; $i++) {
                         echo '<div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-xs-6 p-0 vignette_col"><div class="m-2 vignette" data-element="'.$i.'">';
-                        echo '<img src="avatar-creator/images/Costums/Christmas/Men/'. $i.'.png">';
+                        echo '<img alt="Avatar Vignette christmas" src="avatar-creator/images/Costums/Christmas/Men/'. $i.'.png">';
                         echo '</div></div>';
                     }
                     ?>
@@ -43,7 +43,7 @@
                     $C_Medieval = count($F_Medieval);
                     for ($i = 1; $i <= $C_Medieval; $i++) {
                         echo '<div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-xs-6 p-0 vignette_col"><div class="m-2 vignette" data-element="'.$i.'">';
-                        echo '<img src="avatar-creator/images/Costums/Medieval/Men/'. $i.'.png">';
+                        echo '<img alt="Avatar Vignette Medieval" src="avatar-creator/images/Costums/Medieval/Men/'. $i.'.png">';
                         echo '</div></div>';
                     }
                     ?>

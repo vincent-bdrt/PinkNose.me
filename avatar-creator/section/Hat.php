@@ -20,9 +20,9 @@
                     $C_Hat = count($F_Hat);
                     for ($i = 1; $i <= $C_Hat; $i++) {
                         echo '<div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-xs-6 p-0 vignette_col"><div class="m-2 vignette" data-element="'.$i.'">';
-                        echo '<img data-vignette-item="Hat" src="avatar-creator/images/Hat/'.$i.'/Shape/1.png" class="zindex-4"> ';
-                        echo '<img src="avatar-creator/UI/Base.png" class="zindex-3">';
-                        echo '<img data-vignette-item="Hat_Back" src="avatar-creator/images/Hat/'.$i.'/Shape_Back/1.png" class="zindex-2">';
+                        echo '<img data-vignette-item="Hat" src="avatar-creator/images/Hat/'.$i.'/Shape/1.png" alt="Avatar Vignette" class="zindex-4"> ';
+                        echo '<img src="avatar-creator/UI/Base.png" alt="Avatar Vignette" class="zindex-3">';
+                        echo '<img data-vignette-item="Hat_Back" src="avatar-creator/images/Hat/'.$i.'/Shape_Back/1.png" alt="Avatar Vignette" class="zindex-2">';
                         echo '</div></div>';
                     }
                     ?>

@@ -27,12 +27,10 @@
     <link rel="icon" type="image/png" href="/favicon.ico" />
     <!-- CSS - LIBRAIRIES -->
     <script src="https://kit.fontawesome.com/a096bedc5f.js" crossorigin="anonymous"></script>
-    <link href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-shims.min.css" media="all" rel="stylesheet"
-        id="font-awesome-5-kit-css">
+    <link href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-shims.min.css" media="all" rel="stylesheet">
     <link href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-font-face.min.css" media="all"
-        rel="stylesheet" id="font-awesome-5-kit-css">
-    <link href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all" rel="stylesheet"
-        id="font-awesome-5-kit-css">
+        rel="stylesheet">
+    <link href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all" rel="stylesheet">
 
 
     <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-shims.min.css" />

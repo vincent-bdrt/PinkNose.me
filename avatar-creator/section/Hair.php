@@ -31,9 +31,9 @@
         $C_Hair_shaved = count($F_Hair_shaved);
         for ($i = 1; $i <= $C_Hair_shaved; $i++) {
             echo '<div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-xs-6 p-0 vignette_col"><div class="m-2 vignette" data-element="'.$i.'">';
-            echo '<img data-vignette-item="Hair" src="avatar-creator/images/Hair/shaved/'.$i.'/1.png" class="zindex-4"> ';
-            echo '<img src="avatar-creator/UI/Base.png" class="zindex-3">';
-            echo '<img data-vignette-item="Hair_Back" src="avatar-creator/images/Hair_Back/shaved/'.$i.'/1.png" class="zindex-2"> ';
+            echo '<img data-vignette-item="Hair" src="avatar-creator/images/Hair/shaved/'.$i.'/1.png" alt="Avatar Vignette" class="zindex-4"> ';
+            echo '<img src="avatar-creator/UI/Base.png" alt="Avatar Vignette" class="zindex-3">';
+            echo '<img data-vignette-item="Hair_Back" src="avatar-creator/images/Hair_Back/shaved/'.$i.'/1.png" alt="Avatar Vignette" class="zindex-2"> ';
             echo '</div></div>';
         }
         ?>
@@ -46,9 +46,9 @@
         $C_Hair_very_short = count($F_Hair_very_short);
         for ($i = 1; $i <= $C_Hair_very_short; $i++) {
         echo '<div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-xs-6 p-0 vignette_col"><div class="m-2 vignette" data-element="'.$i.'">';
-        echo '<img data-vignette-item="Hair" src="avatar-creator/images/Hair/very_short/'.$i.'/1.png" class="zindex-4"> ';
-        echo '<img src="avatar-creator/UI/Base.png" class="zindex-3">';
-        echo '<img data-vignette-item="Hair_Back" src="avatar-creator/images/Hair_Back/very_short/'.$i.'/1.png" class="zindex-2"> ';
+        echo '<img data-vignette-item="Hair" src="avatar-creator/images/Hair/very_short/'.$i.'/1.png" alt="Avatar Vignette" class="zindex-4"> ';
+        echo '<img src="avatar-creator/UI/Base.png" alt="Avatar Vignette" class="zindex-3">';
+        echo '<img data-vignette-item="Hair_Back" src="avatar-creator/images/Hair_Back/very_short/'.$i.'/1.png" alt="Avatar Vignette" class="zindex-2"> ';
         echo '</div></div>';
 
 
@@ -63,9 +63,9 @@
         $C_Hair_short = count($F_Hair_short);
         for ($i = 1; $i <= $C_Hair_short; $i++) {
             echo '<div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-xs-6 p-0 vignette_col"><div class="m-2 vignette" data-element="'.$i.'">';
-            echo '<img data-vignette-item="Hair" src="avatar-creator/images/Hair/short/'.$i.'/1.png" class="zindex-4"> ';
-            echo '<img src="avatar-creator/UI/Base.png" class="zindex-3">';
-            echo '<img data-vignette-item="Hair_Back" src="avatar-creator/images/Hair_Back/short/'.$i.'/1.png" class="zindex-2"> ';
+            echo '<img data-vignette-item="Hair" src="avatar-creator/images/Hair/short/'.$i.'/1.png" alt="Avatar Vignette" class="zindex-4"> ';
+            echo '<img src="avatar-creator/UI/Base.png" alt="Avatar Vignette" class="zindex-3">';
+            echo '<img data-vignette-item="Hair_Back" src="avatar-creator/images/Hair_Back/short/'.$i.'/1.png" alt="Avatar Vignette" class="zindex-2"> ';
             echo '</div></div>';
         }
         ?>
@@ -78,9 +78,9 @@
         $C_Hair_medium = count($F_Hair_medium);
         for ($i = 1; $i <= $C_Hair_medium; $i++) {
             echo '<div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-xs-6 p-0 vignette_col"><div class="m-2 vignette" data-element="'.$i.'">';
-            echo '<img data-vignette-item="Hair" src="avatar-creator/images/Hair/medium/'.$i.'/1.png" class="zindex-4"> ';
-            echo '<img src="avatar-creator/UI/Base.png" class="zindex-3">';
-            echo '<img data-vignette-item="Hair_Back" src="avatar-creator/images/Hair_Back/medium/'.$i.'/1.png" class="zindex-2"> ';
+            echo '<img data-vignette-item="Hair" src="avatar-creator/images/Hair/medium/'.$i.'/1.png" alt="Avatar Vignette" class="zindex-4"> ';
+            echo '<img src="avatar-creator/UI/Base.png" alt="Avatar Vignette" class="zindex-3">';
+            echo '<img data-vignette-item="Hair_Back" src="avatar-creator/images/Hair_Back/medium/'.$i.'/1.png" alt="Avatar Vignette" class="zindex-2"> ';
             echo '</div></div>';
         }
         ?>
@@ -94,9 +94,9 @@
         $C_Hair_long = count($F_Hair_long);
         for ($i = 1; $i <= $C_Hair_long; $i++) {
             echo '<div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-xs-6 p-0 vignette_col"><div class="m-2 vignette" data-element="'.$i.'">';
-            echo '<img data-vignette-item="Hair" src="avatar-creator/images/Hair/long/'.$i.'/1.png" class="zindex-4"> ';
-            echo '<img src="avatar-creator/UI/Base.png" class="zindex-3">';
-            echo '<img data-vignette-item="Hair_Back" src="avatar-creator/images/Hair_Back/long/'.$i.'/1.png" class="zindex-2"> ';
+            echo '<img data-vignette-item="Hair" src="avatar-creator/images/Hair/long/'.$i.'/1.png" alt="Avatar Vignette" class="zindex-4"> ';
+            echo '<img src="avatar-creator/UI/Base.png" alt="Avatar Vignette" class="zindex-3">';
+            echo '<img data-vignette-item="Hair_Back" src="avatar-creator/images/Hair_Back/long/'.$i.'/1.png" alt="Avatar Vignette" class="zindex-2"> ';
             echo '</div></div>';
         }
         ?>
