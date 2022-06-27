@@ -20,9 +20,9 @@
                         $C_Mustache = count($F_Mustache);
                             for ($i = 1; $i <= $C_Mustache; $i++) {
                                 echo '<div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-xs-6 p-0 vignette_col"><div class="m-2 vignette" data-element="'.$i.'">';
-                                echo '<img src="avatar-creator/images/Nose/1.png" alt="Avatar Vignette" class="zindex-4">';
-                                echo '<img data-vignette-item="Mustache" src="avatar-creator/images/Mustache/'.$i.'/1.png" alt="Avatar Vignette" class="zindex-3"> ';
-                                echo '<img src="avatar-creator/UI/Base.png" alt="Avatar Vignette" class="zindex-0">';
+                                echo '<img loading="lazy"src="avatar-creator/images/Nose/1.png" alt="Avatar Vignette" class="zindex-4">';
+                                echo '<img loading="lazy"data-vignette-item="Mustache" src="avatar-creator/images/Mustache/'.$i.'/1.png" alt="Avatar Vignette" class="zindex-3"> ';
+                                echo '<img loading="lazy"src="avatar-creator/UI/Base.png" alt="Avatar Vignette" class="zindex-0">';
                                 echo '</div></div>';
                         }
                         ?>
@@ -36,7 +36,7 @@
                                     $C_Beard = count($F_Beard);
                                     for ($i = 1; $i <= $C_Beard; $i++) {
                                         echo '<div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-xs-6 p-0 vignette_col"><div class="m-2 vignette" data-element="'.$i.'">';
-                                        echo '<img alt="Avatar Vignette Beard" src="avatar-creator/images/Beard/'.$i.'/1.png"> ';
+                                        echo '<img loading="lazy"alt="Avatar Vignette Beard" src="avatar-creator/images/Beard/'.$i.'/1.png"> ';
                                         echo '</div></div>';
                                 }
           ?>

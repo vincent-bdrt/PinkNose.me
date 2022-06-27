@@ -6,9 +6,9 @@
             $C_Eyebrow = count($F_Eyebrow);
             for ($i = 1; $i <= $C_Eyebrow; $i++) {
                 echo '<div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-xs-6 p-0 vignette_col"><div class="m-2 vignette" data-element="'.$i.'">';
-                echo '<img src="avatar-creator/images/Eyebrow/'. $i.'/1.png" data-vignette-item="Eyebrow" alt="Avatar Vignette" class="zindex-2">';
-                echo '<img src="avatar-creator/images/Eyes/1.png" alt="Avatar Vignette" class="zindex-1">';
-                echo '<img src="avatar-creator/UI/Base.png" alt="Avatar Vignette" class="zindex-0">';
+                echo '<img loading="lazy"src="avatar-creator/images/Eyebrow/'. $i.'/1.png" data-vignette-item="Eyebrow" alt="Avatar Vignette" class="zindex-2">';
+                echo '<img loading="lazy"src="avatar-creator/images/Eyes/1.png" alt="Avatar Vignette" class="zindex-1">';
+                echo '<img loading="lazy"src="avatar-creator/UI/Base.png" alt="Avatar Vignette" class="zindex-0">';
                 echo '</div></div>';
           }
         ?>

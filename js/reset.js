@@ -7,7 +7,7 @@ $(document).ready(function () {
         $('#Result_Nose').attr('src', "avatar-creator/images/Nose/1.png");
         $('#Result_Mouth').attr('src', "avatar-creator/images/Mouth/1.png");
         $('#Result_Eyebrow').attr('src', "avatar-creator/images/Eyebrow/1/1.png");
-        $('#Result_Background,#Result_Makeup,#Result_Spot,#Result_Glasses,#Result_Glasses_Back,#Result_Hair_Back,#Result_Hat_Back,#Result_Background_motif,#Result_Earring,#Result_Necklace,#Result_Top,#Result_Motif_Top,#Result_Jacket,#Result_Hair,#Result_Mustache,#Result_Beard,#Result_Costums,#Result_Hat_Hair_Back,#Result_Hat_Hair,#Result_Hat').attr('src', "avatar-creator/UI/reset.png");
+        $('#Result_Background,#Result_Makeup,#Result_Spot,#Result_Glasses,#Result_Glasses_Back,#Result_Hair_Back,#Result_Hat_Back,#Result_Background_motif,#Result_Earring,#Result_Necklace,#Result_Top,#Result_Jacket,#Result_Hair,#Result_Mustache,#Result_Beard,#Result_Costums,#Result_Hat_Hair_Back,#Result_Hat_Hair,#Result_Hat').attr('src', "avatar-creator/UI/reset.png");
     });
 
 
@@ -52,12 +52,12 @@ $(document).ready(function () {
     /*-----------RESET COSTUMS-----------------*/
     function reset_costum(item) {
         $('#Section-' + item + ' .reset').click(function () {
-            $('#Result_Motif_Top').attr('src', $('#Result_Motif_Top').attr('data-src-store'));
             $('#Result_Top').attr('src', $('#Result_Top').attr('data-src-store'));
             $('#Result_Jacket').attr('src', $('#Result_Jacket').attr('data-src-store'));
             $('#Result_Necklace').attr('src', $('#Result_Necklace').attr('data-src-store'));
-            $('#Section-Top,#Section-Motif_Top,#Section-Jacket,#collapseNecklace').removeClass('disable');
+            $('#Section-Top,#Section-Jacket,#collapseNecklace').removeClass('disable');
             $('#Section-Costums .vignette img.active').removeClass('active');
+            $('#Section-Top').removeClass('item-save');
             /*-----------*/
             $('#Result_Costums').attr('src', "avatar-creator/UI/reset.png");
         })

@@ -48,7 +48,6 @@
                 if ($('.genre.Women.active').hasClass('active')) {
                     $('#Result_Skin').attr('src', $('#Result_Skin').attr("src").replace('/Men/', '/Women/'));
                     $('#Result_Top').attr('src', $('#Result_Top').attr("src").replace('/Men/', '/Women/'));
-                    $('#Result_Motif_Top').attr('src', $('#Result_Motif_Top').attr("src").replace('/Men/', '/Women/'));
                     $('#Result_Jacket').attr('src', $('#Result_Jacket').attr("src").replace('/Men/', '/Women/'));
                     $('#Result_Costums').attr('src', $('#Result_Costums').attr("src").replace('/Men/', '/Women/'));
                     $("#Vignettes-Skin img").each(function () {
@@ -57,8 +56,7 @@
                 } else {
                     $('.vignette img').removeClass('Women');
                     $('#Result_Skin').attr('src', $('#Result_Skin').attr("src").replace('/Women/', '/Men/'));
-                    $('#Result_Top').attr('src', $('#Result_Top').attr("src").replace('/Women/', '/Men/'));
-                    $('#Result_Motif_Top').attr('src', $('#Result_Motif_Top').attr("src").replace('/Women/', '/Men/'));
+
                     $('#Result_Jacket').attr('src', $('#Result_Jacket').attr("src").replace('/Women/', '/Men/'));
                     $('#Result_Costums').attr('src', $('#Result_Costums').attr("src").replace('/Women/', '/Men/'));
                     $("#Vignettes-Skin img").each(function () {
@@ -143,16 +141,19 @@
                         }
                     }
                     if (costums == true) {
-                        if (!$('#Section-Costums .vignette').hasClass('active')) {
-                            $('#Result_Motif_Top').attr('data-src-store', $('#Result_Motif_Top').attr('src'));
-                            $('#Result_Top').attr('data-src-store', $('#Result_Top').attr('src'));
-                            $('#Result_Jacket').attr('data-src-store', $('#Result_Jacket').attr('src'));
-                            $('#Result_Necklace').attr('data-src-store', $('#Result_Necklace').attr('src'));
-                        }
-                        $(this).addClass('active');
-                        $('#Section-Top,#Section-Motif_Top,#Section-Jacket,#collapseNecklace').addClass('disable');
 
-                        $('#Result_Motif_Top,#Result_Top,#Result_Jacket,#Result_Necklace').attr('src', "avatar-creator/UI/reset.png");
+
+                    /*SAVE*/
+                    if (!$('#Section-Top').hasClass('item-save')) {
+                        $('#Section-Top').addClass('item-save');
+                        $('#Result_Top').attr('data-src-store', $('#Result_Top').attr('src'));
+                        $('#Result_Jacket').attr('data-src-store', $('#Result_Jacket').attr('src'));
+                        $('#Result_Necklace').attr('data-src-store', $('#Result_Necklace').attr('src'));
+                        $('#Result_Top,#Result_Jacket,#Result_Necklace').attr('src', "avatar-creator/UI/reset.png");
+                    }
+
+                    $(this).addClass('active');
+                    $('#Section-Top,#Section-Jacket,#collapseNecklace').addClass('disable');
 
                         if ($('.genre.Women.active').hasClass('active')) {
                             $('#Result_Costums').attr('src', 'avatar-creator/images/Costums/' + item + '/Women/' + $(this).attr("data-element") + '.png');
@@ -163,7 +164,6 @@
                 });
             }
             change_with_sex('Skin', false);
-            change_with_sex('Motif_Top', false);
             change_with_sex('Christmas', true);
             change_with_sex('Job', true);
             change_with_sex('Medieval', true);

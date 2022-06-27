@@ -24,11 +24,11 @@
                     $C_Glasses = count($F_Glasses);
                     for ($i = 1; $i <= $C_Glasses; $i++) {
                     echo '<div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-xs-6 p-0 vignette_col"><div class="m-2 vignette" data-element="'.$i.'">';
-                    echo '<img data-vignette-item="Glasses" src="avatar-creator/images/Glasses/'.$i.'/1.png" alt="Avatar Vignette" class="zindex-4"> ';
-                    echo '<img src="avatar-creator/images/Nose/1.png" alt="Avatar Vignette" class="zindex-3">';
-                    echo '<img src="avatar-creator/images/Glasses_Back/'. $i.'/1.png" data-vignette-item="Glasses_Back" alt="Avatar Vignette" class="zindex-2">';
-                    echo '<img src="avatar-creator/images/Eyes/1.png" alt="Avatar Vignette" class="zindex-1">';
-                    echo '<img src="avatar-creator/UI/Base.png" alt="Avatar Vignette" class="zindex-0">';
+                    echo '<img loading="lazy"data-vignette-item="Glasses" src="avatar-creator/images/Glasses/'.$i.'/1.png" alt="Avatar Vignette" class="zindex-4"> ';
+                    echo '<img loading="lazy"src="avatar-creator/images/Nose/1.png" alt="Avatar Vignette" class="zindex-3">';
+                    echo '<img loading="lazy"src="avatar-creator/images/Glasses_Back/'. $i.'/1.png" data-vignette-item="Glasses_Back" alt="Avatar Vignette" class="zindex-2">';
+                    echo '<img loading="lazy"src="avatar-creator/images/Eyes/1.png" alt="Avatar Vignette" class="zindex-1">';
+                    echo '<img loading="lazy"src="avatar-creator/UI/Base.png" alt="Avatar Vignette" class="zindex-0">';
                     echo '</div></div>';
                     }
                     ?>
@@ -57,7 +57,7 @@
                     $C_Necklace = count($F_Necklace);
                     for ($i = 1; $i <= $C_Necklace; $i++) {
                         echo '<div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-xs-6 p-0 vignette_col"><div class="m-2 vignette" data-element="'.$i.'">';
-                        echo '<img data-vignette-item="Necklace"  alt="Avatar Vignette Necklace"  src="avatar-creator/images/Necklace/'.$i.'/1.png"> ';
+                        echo '<img loading="lazy"data-vignette-item="Necklace"  alt="Avatar Vignette Necklace"  src="avatar-creator/images/Necklace/'.$i.'/1.png"> ';
                         echo '</div></div>';
                     }
                 ?>
@@ -82,7 +82,7 @@
            $C_Earring = count($F_Earring);
            for ($i = 1; $i <= $C_Earring; $i++) {
             echo '<div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-xs-6 p-0 vignette_col"><div class="m-2 vignette" data-element="'.$i.'">';
-            echo '<img data-vignette-item="Earring" alt="Avatar Vignette Earring"  src="avatar-creator/images/Earring/'.$i.'/1.png"> ';
+            echo '<img loading="lazy"data-vignette-item="Earring" alt="Avatar Vignette Earring"  src="avatar-creator/images/Earring/'.$i.'/1.png"> ';
             echo '</div></div>';
        }
    ?>

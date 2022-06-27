@@ -24,7 +24,6 @@ $(document).ready(function () {
         var result_Glasses = $('#Result_Glasses').attr('src');
         var result_Earring = $('#Result_Earring').attr('src');
         var result_Top = $('#Result_Top').attr('src');
-        var result_Motif_Top = $('#Result_Motif_Top').attr('src');
         var result_Necklace = $('#Result_Necklace').attr('src');
         var result_Jacket = $('#Result_Jacket').attr('src');
         var result_Costums = $('#Result_Costums').attr('src');
@@ -49,7 +48,6 @@ $(document).ready(function () {
         var img_Mouth = loadImage(result_Mouth, generation_image);
         var img_Nose = loadImage(result_Nose, generation_image);
         var img_Top = loadImage(result_Top, generation_image);
-        var img_Motif_Top = loadImage(result_Motif_Top, generation_image);
         var img_Necklace = loadImage(result_Necklace, generation_image);
         var img_Jacket = loadImage(result_Jacket, generation_image);
         var img_Costums = loadImage(result_Costums, generation_image);
@@ -78,7 +76,6 @@ $(document).ready(function () {
             context.drawImage(img_Spot, 0, 0);
             context.drawImage(img_Marquillage, 0, 0);
             context.drawImage(img_Top, 0, 0);
-            context.drawImage(img_Motif_Top, 0, 0);
             context.drawImage(img_Necklace, 0, 0);
             context.drawImage(img_Jacket, 0, 0);
             context.drawImage(img_Costums, 0, 0);

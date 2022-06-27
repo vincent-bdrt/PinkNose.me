@@ -117,7 +117,7 @@ $length_haircolor=count($haircolor);?>
                 <p class="author">by <a href="https://vincent-bod.art/" target="_blank">Vincent BODART</a>- <a
                         id="Instagram" href="https://www.instagram.com/pinknose.me/" target="_blank">Instagram </a>- <a
                         id="Contact" href="https://twitter.com/Ballcutter_" target="_blank">Contact </a>-
-                    <a id="Github" href="https://github.com/vincent-bdrt/PinkNose.me/" target="_blank"><img src="avatar-creator/UI/Icon/github-logo.svg" alt="Icone github"> </a>
+                    <a id="Github" href="https://github.com/vincent-bdrt/PinkNose.me/" target="_blank"><img loading="lazy"src="avatar-creator/UI/Icon/github-logo.svg" alt="Icone github"> </a>
 
                 </p>
             </div>
@@ -126,12 +126,12 @@ $length_haircolor=count($haircolor);?>
 
                     <?php 
 
-$section_name=array("Skin","Hair","Beards","Eyes","Eyebrow","Nose","Mouth","Spot","Makeup","Accessory","Top","Motif_Top","Jacket","Hat","Costums","Background");
+$section_name=array("Skin","Hair","Beards","Eyes","Eyebrow","Nose","Mouth","Spot","Makeup","Accessory","Top","Jacket","Hat","Costums","Background");
             for ($i = 0; $i < count($section_name); $i++) {
                 echo '<button type="button" id="';
                 echo $section_name[$i];
                 echo '" class="m-2 btn btn-default btn-lg btn-round">';
-                echo '<img src="avatar-creator/UI/Icon/icon_';
+                echo '<img loading="lazy"src="avatar-creator/UI/Icon/icon_';
                 echo $section_name[$i];
                 echo '.svg" alt="Icon ';
                 echo $section_name[$i];
@@ -153,7 +153,6 @@ $section_name=array("Skin","Hair","Beards","Eyes","Eyebrow","Nose","Mouth","Spot
                 <?php include 'avatar-creator/section/Accessory.php'?>
                 <?php include 'avatar-creator/section/Hat.php'?>
                 <?php include 'avatar-creator/section/Top.php'?>
-                <?php include 'avatar-creator/section/Motif_Top.php'?>
                 <?php include 'avatar-creator/section/Jacket.php'?>
                 <?php include 'avatar-creator/section/Costums.php'?>
                 <?php include 'avatar-creator/section/Background.php'?>

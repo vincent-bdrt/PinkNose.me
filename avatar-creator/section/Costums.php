@@ -2,19 +2,19 @@
  <section id="Section-Costums">
      <ul class="nav nav-pills">
          <li id="Section-Medieval" class="active">
-             <a data-toggle="pill" href="#collapseMedieval"><img src="avatar-creator/UI/Icon/icon_medieval.svg"
+             <a data-toggle="pill" href="#collapseMedieval"><img loading="lazy"src="avatar-creator/UI/Icon/icon_medieval.svg"
                      alt="Icon Costume medieval">
                  <div class="reset color-item mr-0 ml-3"><i class="fa fa-trash"></i></div>
              </a>
          </li>
          <li id="Section-Christmas" class="ml-3 ">
-             <a data-toggle="pill" href="#collapseChristmas"><img src="avatar-creator/UI/Icon/icon_christmas.svg"
+             <a data-toggle="pill" href="#collapseChristmas"><img loading="lazy"src="avatar-creator/UI/Icon/icon_christmas.svg"
                      alt="Icon Costume de Noel">
                  <div class="reset color-item mr-0 ml-3"><i class="fa fa-trash"></i></div>
              </a>
          </li>
          <li id="Section-Job" class="ml-3">
-             <a data-toggle="pill" href="#collapseJob"><img src="avatar-creator/UI/Icon/icon_job.svg"
+             <a data-toggle="pill" href="#collapseJob"><img loading="lazy"src="avatar-creator/UI/Icon/icon_job.svg"
                      alt="Icon Costume de fête">
                  <div class="reset color-item mr-0 ml-3"><i class="fa fa-trash"></i></div>
              </a>
@@ -30,7 +30,7 @@
                     $C_Christmas = count($F_Christmas);
                     for ($i = 1; $i <= $C_Christmas; $i++) {
                         echo '<div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-xs-6 p-0 vignette_col"><div class="m-2 vignette" data-element="'.$i.'">';
-                        echo '<img alt="Avatar Vignette christmas" src="avatar-creator/images/Costums/Christmas/Men/'. $i.'.png">';
+                        echo '<img loading="lazy"alt="Avatar Vignette christmas" src="avatar-creator/images/Costums/Christmas/Men/'. $i.'.png">';
                         echo '</div></div>';
                     }
                     ?>
@@ -43,7 +43,7 @@
                     $C_Medieval = count($F_Medieval);
                     for ($i = 1; $i <= $C_Medieval; $i++) {
                         echo '<div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-xs-6 p-0 vignette_col"><div class="m-2 vignette" data-element="'.$i.'">';
-                        echo '<img alt="Avatar Vignette Medieval" src="avatar-creator/images/Costums/Medieval/Men/'. $i.'.png">';
+                        echo '<img loading="lazy"alt="Avatar Vignette Medieval" src="avatar-creator/images/Costums/Medieval/Men/'. $i.'.png">';
                         echo '</div></div>';
                     }
                     ?>
@@ -51,7 +51,15 @@
          </div>
          <div id="collapseJob" class="tab-pane">
              <div class="mx-2 row section-vignettes withsubpart vignette-default" id="Vignettes-Job">
-             <h2>Prochainement</h2>
+             <?php
+$F_Job = glob("avatar-creator/images/Costums/Job/Men/*.png");
+$C_Job = count($F_Job);
+for ($i = 1; $i <= $C_Job; $i++) {
+    echo '<div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-xs-6 p-0 vignette_col"><div class="m-2 vignette" data-element="'.$i.'">';
+    echo '<img loading="lazy"alt="Avatar Vignette Job" src="avatar-creator/images/Costums/Job/Men/'. $i.'.png">';
+    echo '</div></div>';
+}
+?>
              </div>
          </div>
      </div>
